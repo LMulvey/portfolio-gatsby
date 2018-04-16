@@ -9,6 +9,10 @@ import './index.css'
 
 const Layout = ({ children, data }) => (
   <Container>
+     <Img
+      style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: -1, width: '100%', height: '100%' }}
+      sizes={data.imageSharp.sizes}
+    />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -20,20 +24,10 @@ const Layout = ({ children, data }) => (
       <script defer src="https://pro.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-+1nLPoB0gaUktsZJP+ycZectl3GX7wP8Xf2PE/JHrb7X1u7Emm+v7wJMbAcPr8Ge" crossorigin="anonymous"></script>
     </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      <Img
-        style={{ position: 'absolute', top: 0, left: 0, right: 0, zIndex: -1, width: '100%', height: '100%' }}
-        sizes={data.imageSharp.sizes}
-      />
+   
+    <ContentContainer>
       {children()}
-    </div>
+    </ContentContainer>
   </Container>
 )
 
@@ -49,6 +43,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   margin-top: 5vh;
+`;
+
+const ContentContainer = styled.div`
+  margin: 25px auto;
+  padding: 0px 1.0875rem 1.45rem;
+  max-width: 960px;
+  background: white;
 `;
 
 export const query = graphql`

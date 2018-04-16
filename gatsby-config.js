@@ -3,6 +3,8 @@ module.exports = {
     title: 'Lee Mulvey | Web Developer',
   },
   plugins: [
+    'gatsby-transformer-remark',
+    'custom-projects',
     'gatsby-plugin-react-helmet',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

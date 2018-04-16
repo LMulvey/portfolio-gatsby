@@ -16,7 +16,7 @@ const Button = styled.button`
   border-radius: 6px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   padding: 10px 25px;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.6);
   color: ${props => props.theme.color || props.theme.main};
   transition: all 75ms ease-in;
   transition-property: border, background-color, color, transform;

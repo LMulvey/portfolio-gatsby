@@ -16,6 +16,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'web developer, developer, freelance, react, redux, node, javascript, css, html, ruby, rails, postgresql, mongodb, gatsby' },
       ]}
     >
+      <link rel="stylesheet" href="https://use.typekit.net/mxs6bub.css" />
       <script defer src="https://pro.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-+1nLPoB0gaUktsZJP+ycZectl3GX7wP8Xf2PE/JHrb7X1u7Emm+v7wJMbAcPr8Ge" crossorigin="anonymous"></script>
     </Helmet>
     <Header siteTitle={data.site.siteMetadata.title} />

@@ -10,10 +10,12 @@ const Header = ({ siteTitle }) => (
       <Wordmark>Lee Mulvey</Wordmark>
       <Submark>Web Developer, Weird Dad, Mentor, Creator, Do-er</Submark>
     </Link>
-
+    
     <ButtonsContainer>
-      <HeaderButton title="GitHub" link="http://www.github.com/LMulvey" icon="fab fa-github" />
+      <HeaderButton title="Blog" link="http://www.leemulvey.com/blog" icon="fal fa-newspaper" />
       <HeaderButton title="Twitter" theme={{ main: '#1dcaff', contrast: 'white' }} link="http://www.twitter.com/LeeMulvey" icon="fab fa-twitter" />
+      <HeaderButton title="GitHub" link="http://www.github.com/LMulvey" icon="fab fa-github" />
+      <HeaderButton title="StackOverflow" theme={{ main: '#FF9900', contrast: 'white', color: '#FF6922' }} link="https://stackoverflow.com/users/8246359" icon="fab fa-stack-overflow" />
     </ButtonsContainer>
   </div>
 )
@@ -21,10 +23,16 @@ const Header = ({ siteTitle }) => (
 export default Header;
 
 const Wordmark = styled.h1`
-  display: inline-block;
+  display: block;
+  font-family: 'flood-std', sans-serif;
   font-size: 5rem;
   text-align: center;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.3);
+  text-shadow: -5px -5px 0px white;
+  background: #1a2a6c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fdbb2d, #b21f1f, #1a2a6c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 const Submark = styled.p`

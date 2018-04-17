@@ -7,8 +7,8 @@ import HeaderButton from './headerButton';
 const Header = ({ siteTitle }) => (
   <div>
     <Link to="/" style={{ textDecoration: 'none', }}>
-      <Wordmark>Lee Mulvey</Wordmark>
-      <Submark>Web Developer, Weird Dad, Mentor, Creator, Do-er</Submark>
+      <Wordmark>≋w≋a≋v≋e≋s≋</Wordmark>
+      <Submark>Maker of thngs and I like waves</Submark>
     </Link>
     
     <ButtonsContainer>
@@ -40,7 +40,7 @@ const Submark = styled.p`
   margin-top: -10px;
   transform: skew(-15deg, 0deg);
   padding: 10px;
-  background-color: white;
+  background-color: #F1EAEA;
   text-align: center;
 `;
 

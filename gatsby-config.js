@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lee Mulvey | Web Developer',
+    title: 'Waves',
   },
   plugins: [
     'gatsby-transformer-remark',

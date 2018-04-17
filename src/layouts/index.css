@@ -1,0 +1,9 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background: -webkit-linear-gradient(-90deg,rgb(156, 190, 211), rgb(206, 229, 240)) no-repeat fixed;
+}

@@ -1,25 +1,35 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
-  "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "name": "leemulvey-portfolio",
+  "description": "Portfolio w/ Gatsby and custom plugins",
+  "version": "2.0.0",
+  "author": "Lee Mulvey <hello@leemulvey.com>",
   "dependencies": {
-    "gatsby": "^1.9.247",
-    "gatsby-image": "^1.0.45",
-    "gatsby-link": "^1.6.40",
-    "gatsby-plugin-react-helmet": "^2.0.10",
-    "gatsby-plugin-sharp": "^1.6.42",
-    "gatsby-plugin-typography": "^1.7.18",
-    "gatsby-source-filesystem": "^1.5.29",
-    "gatsby-transformer-remark": "^1.7.40",
-    "gatsby-transformer-sharp": "^1.6.22",
+    "gatsby": "2.0.41",
+    "gatsby-image": "2.0.20",
+    "gatsby-link": "2.0.6",
+    "gatsby-plugin-react-helmet": "3.0.1",
+    "gatsby-plugin-sharp": "2.0.12",
+    "gatsby-plugin-typography": "2.2.1",
+    "gatsby-source-filesystem": "2.0.8",
+    "gatsby-transformer-remark": "2.1.12",
+    "gatsby-transformer-sharp": "2.1.8",
+    "nuka-carousel": "^4.4.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-grid-system": "4.3.1",
     "react-helmet": "^5.2.0",
-    "styled-components": "^3.2.5",
-    "typography": "^0.16.6",
+    "react-typography": "^0.16.13",
+    "styled-components": "4.0.3",
+    "typography": "^0.16.17",
+    "typography-theme-github": "^0.15.10",
+    "typography-theme-kirkham": "^0.16.3",
     "typography-theme-sutro": "^0.15.10"
   },
   "keywords": [
-    "gatsby"
+    "portfolio",
+    "lee mulvey",
+    "developer",
+    "web developer"
   ],
   "license": "MIT",
   "scripts": {
@@ -29,6 +39,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "1.15.1"
   }
 }

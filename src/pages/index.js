@@ -1,81 +1,106 @@
 import React, { Component } from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { StaticQuery, graphql } from 'gatsby'
+
+import { Container, Row, Col } from 'react-grid-system'
+import Layout from '../components/Layout'
+
+const sortByDate = (
+  {
+    node: {
+      frontmatter: { date: dateA },
+    },
+  },
+  {
+    node: {
+      frontmatter: { date: dateB },
+    },
+  }
+) => {
+  const dateObjA = new Date(dateA)
+  const dateObjB = new Date(dateB)
+
+  /** Descending (most recent first) */
+  if (dateObjA < dateObjB) return 1
+  if (dateObjB < dateObjA) return -1
+  return 0
+}
 
 class IndexPage extends Component {
-
   render() {
-    const projects = this.props.data.allMarkdownRemark.edges;
     return (
-      <ProjectsContainer>
-        {projects.map((item) => (
-          <Link to={`/projects${item.node.fields.slug}`}>
-            <ProjectWrapper key={item.node.frontmatter.title.length * (Math.random() * 44)}>
-              <ProjectImage src={item.node.frontmatter.bannerurl} />
-              <ProjectTitle>{item.node.frontmatter.title}</ProjectTitle>
-            </ProjectWrapper>
-          </Link>
-        ))}
-      </ProjectsContainer>
+      <Layout>
+        <Container>
+          <Row>
+            <Col xs={10} offset={{ xs: 1 }}>
+              <h1>Recent Work</h1>
+            </Col>
+          </Row>
+          <Row justify="center">
+            <StaticQuery
+              query={projectsQuery}
+              render={({ allMarkdownRemark: { edges: projects } }) => {
+                return projects
+                  .sort(sortByDate)
+                  .map(
+                    ({
+                      node: {
+                        frontmatter: { title, bannerurl },
+                        fields: { slug },
+                      },
+                    }) => (
+                      <Col xs={3} key={btoa(title) + Math.random() * 4400}>
+                        <Link to={`/projects${slug}`}>
+                          <ProjectWrapper imageSrc={bannerurl}>
+                            <ProjectTitle>{title}</ProjectTitle>
+                          </ProjectWrapper>
+                        </Link>
+                      </Col>
+                    )
+                  )
+              }}
+            />
+          </Row>
+        </Container>
+      </Layout>
     )
   }
 }
 
-export default IndexPage;
-
-const ProjectsContainer = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-`;
+export default IndexPage
 
 const ProjectWrapper = styled.div`
+  background: url(${({ imageSrc }) => imageSrc}) center center;
+  background-size: cover;
   display: flex;
-  position: relative;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  background: #333333;
   padding: 0;
-  margin: 5px;
+  margin: 25px 5px;
   border-radius: 6px;
+  height: 150px;
   transition: transform 100ms ease-out;
 
   :hover {
     transform: scale(1.04);
     box-shadow: 3px 3px 25px rgba(0, 0, 0, 0.4);
   }
-`;
-
-const ProjectImage = styled.img`
-  position: relative;
-  margin: 0;
-  width: 295px;
-  height: auto;
-  object-fit: cover;
-  opacity: 0.5;
-  border-radius: 6px;
-  transition: opacity 100ms ease-out;
-  
-  ${ProjectWrapper}:hover & {
-    opacity: 0.8;
-  }
-`;
+`
 
 const ProjectTitle = styled.h3`
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-  top: 45%;
-  color: #F3F3F3;
+  color: #f3f3f3;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.8);
   user-select: none;
-`;
+  margin: 0;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+`
 
-
-export const query = graphql`
+const projectsQuery = graphql`
   query IndexPageQuery {
     allMarkdownRemark {
       edges {
@@ -83,6 +108,7 @@ export const query = graphql`
           html
           frontmatter {
             title
+            date
             url
             bannerurl
           }
@@ -93,4 +119,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

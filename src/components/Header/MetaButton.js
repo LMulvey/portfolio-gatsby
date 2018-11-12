@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const HeaderButton = ({ link, icon, title, theme }) => (
+const MetaButton = ({ link, icon, title, theme }) => (
     <a href={link}>
       <Button theme={theme}>
         <i className={`${icon} fa-fw`} /> {title}
@@ -36,4 +36,4 @@ Button.defaultProps = {
   }
 }
 
-export default HeaderButton;
+export default MetaButton;

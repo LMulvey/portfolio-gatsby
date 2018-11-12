@@ -1,10 +1,11 @@
 ---
 title: Kingsgate Automotive
-slug: kg-auto
-status: In Progress
+date: 01/08/2018
+status: inprogress
 url: http://www.kingsgateauto.com
-technologies: !!seq [ wordpress, javascript, jquery, photoshop ]
+technologies: !!seq [Wordpress, JavaScript, jQuery, Photoshop]
 bannerurl: http://res.cloudinary.com/leemulvey/image/upload/v1515544024/Portfolio/kingsgate-portfolio.png
-photos: !!seq [ "photo 1", "photo 2" ]
+photos: !!seq []
 ---
-Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition. Created with WordPress in mind for ease-of-use for user and client alike.
+
+Designed the website to be modern. Re-touched the classic wordmark to bring it a sharper definition. Created a custom theme using Understrap as a boilerplate to update the website and create a modern platform for the client to update easily and drive online traffic. The site is designed to be easy to use but also have quick-information for people who are looking for a trustworthy mechanic.

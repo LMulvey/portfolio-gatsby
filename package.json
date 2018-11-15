@@ -4,11 +4,13 @@
   "version": "2.0.0",
   "author": "Lee Mulvey <hello@leemulvey.com>",
   "dependencies": {
+    "babel-plugin-styled-components": "1.8.0",
     "gatsby": "2.0.41",
     "gatsby-image": "2.0.20",
     "gatsby-link": "2.0.6",
     "gatsby-plugin-react-helmet": "3.0.1",
     "gatsby-plugin-sharp": "2.0.12",
+    "gatsby-plugin-styled-components": "3.0.1",
     "gatsby-plugin-typography": "2.2.1",
     "gatsby-source-filesystem": "2.0.8",
     "gatsby-transformer-remark": "2.1.12",
@@ -40,6 +42,11 @@
     "deploy": "gatsby build && gh-pages -d public -b master -r git@github.com:LMulvey/LMulvey.github.io.git"
   },
   "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
     "prettier": "1.15.1"
   }

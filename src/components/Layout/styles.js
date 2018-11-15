@@ -20,5 +20,8 @@ export const GlobalStyles = createGlobalStyle`
   h6 {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   }
-
+  .slider-list,
+  .slider-frame {
+    min-height: 500px;
+  }
 `

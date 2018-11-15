@@ -50,7 +50,7 @@ class IndexPage extends Component {
                         fields: { slug },
                       },
                     }) => (
-                      <Col xs={3} key={btoa(title) + Math.random() * 4400}>
+                      <Col xs={3} key={title + Math.random() * 4400}>
                         <Link to={`/projects${slug}`}>
                           <ProjectWrapper imageSrc={bannerurl}>
                             <ProjectTitle>{title}</ProjectTitle>
@@ -80,6 +80,7 @@ const ProjectWrapper = styled.div`
   padding: 0;
   margin: 25px 5px;
   border-radius: 6px;
+  min-height: 150px;
   height: 150px;
   transition: transform 100ms ease-out;
 

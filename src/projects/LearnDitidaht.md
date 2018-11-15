@@ -4,7 +4,7 @@ date: 08/23/2018
 status: ongoing
 url: http://www.learnditidaht.ca
 technologies: !!seq [React, Redux, Wordpress, Javascript]
-bannerurl: https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541645467/Portfolio/LearnDitidaht.png
+bannerurl: https://res.cloudinary.com/leemulvey/image/upload/v1541645467/Portfolio/LearnDitidaht.png
 photos: !!seq ['https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541999676/Portfolio/ditidaht-coursescreen.png', 
 'https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541999687/Portfolio/ditidaht-vocab.png',
 'https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541999687/Portfolio/ditidaht-cardsort.png',

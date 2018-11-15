@@ -96,7 +96,7 @@ export default ({ data }) => {
             >
               <img alt={title} src={bannerurl} />
               {photos.map(src => (
-                <img alt={title} src={src} />
+                <img key={src} alt={title} src={src} />
               ))}
             </Carousel>
           </Col>

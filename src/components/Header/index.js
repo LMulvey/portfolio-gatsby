@@ -3,8 +3,10 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-grid-system'
 import MetaButton from './MetaButton'
+import great from './descriptors'
 
 const descriptors = [
+  ...great,
   'Weird Dad',
   'Super Weird Dad',
   'Mustache Curator',
@@ -17,8 +19,11 @@ const descriptors = [
   'Surfboard, Surfboard',
   'Ghost 👻',
 ]
+
+const titleCase = string => string.charAt(0).toUpperCase() + string.substring(1)
+
 const randomDescriptor = () =>
-  descriptors[Math.floor(Math.random() * (descriptors.length - 1))]
+  titleCase(descriptors[Math.floor(Math.random() * (descriptors.length - 1))])
 
 const Header = () => (
   <Container>

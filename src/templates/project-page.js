@@ -12,10 +12,10 @@ const StatusBadge = styled.h6`
     status === 'completed' ? 'springgreen' : '#BADA55'};
   color: white;
   font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
   margin: 5px 0;
   border-radius: 10px;
-  max-width: 100px;
-  padding: 5px;
   text-align: center;
 `
 

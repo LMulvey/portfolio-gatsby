@@ -85,11 +85,15 @@ const Wordmark = styled.h1`
 
 const Submark = styled.p`
   display: block;
-  margin-top: -10px;
-  transform: skew(-15deg, 0deg);
-  padding: 10px;
-  background-color: #f1eaea;
+  margin-top: -15px;
   text-align: center;
+  border-radius: 6px;
+  font-weight: 700;
+  color: rgb(255, 82, 0);
+  font-size: 22px;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  text-decoration: italic;
   @media (max-width: 340px) {
     font-size: 0.8rem;
     padding: 8px;

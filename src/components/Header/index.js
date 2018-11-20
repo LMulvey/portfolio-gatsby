@@ -3,10 +3,8 @@ import Link from 'gatsby-link'
 import styled from 'styled-components'
 import { Container, Row, Col } from 'react-grid-system'
 import MetaButton from './MetaButton'
-import great from './descriptors'
 
 const descriptors = [
-  ...great,
   'Weird Dad',
   'Super Weird Dad',
   'Mustache Curator',
@@ -80,6 +78,9 @@ const Wordmark = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 0;
+  @media (max-width: 340px) {
+    font-size: 3.5rem;
+  }
 `
 
 const Submark = styled.p`
@@ -89,6 +90,10 @@ const Submark = styled.p`
   padding: 10px;
   background-color: #f1eaea;
   text-align: center;
+  @media (max-width: 340px) {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
 `
 
 const ButtonsContainer = styled.div`

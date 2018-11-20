@@ -27,6 +27,12 @@ const Button = styled.button`
     color: ${props => props.theme.contrast};
     transform: scale(1.04);
   }
+
+  @media (max-width: 340px) {
+    font-size: 0.75rem;
+    margin: 2px;
+    padding: 8px;
+  }
 `;
 
 Button.defaultProps = {

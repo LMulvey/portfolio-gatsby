@@ -33,7 +33,7 @@ class IndexPage extends Component {
       <Layout>
         <Container>
           <Row>
-            <Col xs={10} offset={{ xs: 1 }}>
+              <Col xs={12}>
               <h1>Recent Work</h1>
             </Col>
           </Row>
@@ -50,7 +50,7 @@ class IndexPage extends Component {
                         fields: { slug },
                       },
                     }) => (
-                      <Col xs={3} key={title + Math.random() * 4400}>
+                      <Col xs={12} sm={6} md={3} key={title + Math.random() * 4400}>
                         <Link to={`/projects${slug}`}>
                           <ProjectWrapper imageSrc={bannerurl}>
                             <ProjectTitle>{title}</ProjectTitle>

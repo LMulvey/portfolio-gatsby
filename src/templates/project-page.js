@@ -38,6 +38,8 @@ const resolveStatus = status => {
       return 'Ongoing'
     case 'inprogress':
       return 'In Progress'
+    case 'contributor':
+      return 'Contributor (open source)'
     case 'complete':
     default:
       return 'Completed'

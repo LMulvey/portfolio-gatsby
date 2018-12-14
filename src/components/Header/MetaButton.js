@@ -1,14 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
+import React from 'react'
+import styled from 'styled-components'
 
 const MetaButton = ({ link, icon, title, theme }) => (
-    <a href={link}>
-      <Button theme={theme}>
-        <i className={`${icon} fa-fw`} /> {title}
-      </Button>
-    </a>
-);
-
+  <a href={link} target="_blank">
+    <Button theme={theme}>
+      <i className={`${icon} fa-fw`} /> {title}
+    </Button>
+  </a>
+)
 
 const Button = styled.button`
   margin: 5px;
@@ -33,13 +32,13 @@ const Button = styled.button`
     margin: 2px;
     padding: 8px;
   }
-`;
+`
 
 Button.defaultProps = {
   theme: {
     main: 'white',
-    contrast: '#333333'
-  }
+    contrast: '#333333',
+  },
 }
 
-export default MetaButton;
+export default MetaButton

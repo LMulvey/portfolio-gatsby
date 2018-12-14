@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import { Container, Row, Col } from 'react-grid-system'
 import styled from 'styled-components'
 import Carousel from 'nuka-carousel'
@@ -32,6 +32,16 @@ const TechBadge = styled.h6`
   margin: 5px;
 `
 
+const StyledH3 = styled.h3`
+  display: block;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`
+
 const resolveStatus = status => {
   switch (status) {
     case 'ongoing':
@@ -60,6 +70,13 @@ export default ({ data }) => {
     <Layout>
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <Container>
+        <Row justify="flex-start">
+          <Col xs={12} md={2}>
+            <Link to="/">
+              <StyledH3>← Home</StyledH3>
+            </Link>
+          </Col>
+        </Row>
         <Row justify="center">
           <Col>
             <h1>{title}</h1>

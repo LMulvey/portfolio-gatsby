@@ -37,9 +37,7 @@ const StyledH3 = styled.h3`
   padding: 0.5rem;
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.15);
-  @media screen and (max-width: 768px) {
-    text-align: center;
-  }
+  text-align: center;
 `
 
 const resolveStatus = status => {
@@ -70,7 +68,7 @@ export default ({ data }) => {
     <Layout>
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <Container>
-        <Row justify="flex-start">
+        <Row justify="flex-end">
           <Col xs={12} md={2}>
             <Link to="/">
               <StyledH3>← Home</StyledH3>
@@ -102,16 +100,23 @@ export default ({ data }) => {
         <Row>
           <Col align="center">
             <Carousel
-              renderCenterLeftControls={({ previousSlide }) => (
-                <CarouselButton title="Previous slide" onClick={previousSlide}>
-                  <i className="fas fa-angle-double-left fa-5x" />
-                </CarouselButton>
-              )}
-              renderCenterRightControls={({ nextSlide }) => (
-                <CarouselButton title="Next slide" onClick={nextSlide}>
-                  <i className="fas fa-angle-double-right fa-5x" />
-                </CarouselButton>
-              )}
+              renderCenterLeftControls={({ previousSlide }) =>
+                photos.length ? (
+                  <CarouselButton
+                    title="Previous slide"
+                    onClick={previousSlide}
+                  >
+                    <i className="fas fa-angle-double-left fa-5x" />
+                  </CarouselButton>
+                ) : null
+              }
+              renderCenterRightControls={({ nextSlide }) =>
+                photos.length ? (
+                  <CarouselButton title="Next slide" onClick={nextSlide}>
+                    <i className="fas fa-angle-double-right fa-5x" />
+                  </CarouselButton>
+                ) : null
+              }
             >
               <img alt={title} src={bannerurl} />
               {photos.map(src => (

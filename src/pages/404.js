@@ -1,36 +1,17 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
-import styled from 'styled-components'
-import { StaticQuery, graphql } from 'gatsby'
-
+import Helmet from 'react-helmet'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '../components/Layout'
 
-const sortByDate = (
-  {
-    node: {
-      frontmatter: { date: dateA },
-    },
-  },
-  {
-    node: {
-      frontmatter: { date: dateB },
-    },
-  }
-) => {
-  const dateObjA = new Date(dateA)
-  const dateObjB = new Date(dateB)
-
-  /** Descending (most recent first) */
-  if (dateObjA < dateObjB) return 1
-  if (dateObjB < dateObjA) return -1
-  return 0
-}
-
 class ErrorPage extends Component {
   render() {
+    const {
+      data: { site },
+    } = this.props
+
     return (
       <Layout>
+        <Helmet title={`Oops! You've got served a 404 | ${site.siteMetadata.title}`} />
         <Container>
           <Row>
             <Col xs={12} align="center">
@@ -48,3 +29,13 @@ class ErrorPage extends Component {
 }
 
 export default ErrorPage
+
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

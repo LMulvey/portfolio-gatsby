@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Container, Row, Col } from 'react-grid-system'
+import { Container, Row, Col, ScreenClassRender } from 'react-grid-system'
 import Layout from '../components/Layout'
 
 const sortByDate = (
@@ -31,38 +31,35 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <Container>
-          <Row>
-              <Col xs={12}>
-              <h1>Recent Work</h1>
-            </Col>
-          </Row>
-          <Row justify="center">
-            <StaticQuery
-              query={projectsQuery}
-              render={({ allMarkdownRemark: { edges: projects } }) => {
-                return projects
-                  .sort(sortByDate)
-                  .map(
-                    ({
-                      node: {
-                        frontmatter: { title, bannerurl },
-                        fields: { slug },
-                      },
-                    }) => (
-                      <Col xs={12} sm={6} md={3} key={title + Math.random() * 4400}>
-                        <Link to={`/projects${slug}`}>
-                          <ProjectWrapper imageSrc={bannerurl}>
-                            <ProjectTitle>{title}</ProjectTitle>
-                          </ProjectWrapper>
-                        </Link>
-                      </Col>
-                    )
-                  )
-              }}
-            />
-          </Row>
-        </Container>
+        <ScreenClassRender
+          render={screenClass => (
+            <Container>
+              <Row>
+                <Col xs={12}>
+                  <h1>Recent Work</h1>
+                </Col>
+              </Row>
+              <Row justify={['xs', 'sm'].includes(screenClass) ? 'center' : 'start'}>
+                <StaticQuery
+                  query={projectsQuery}
+                  render={({ allMarkdownRemark: { edges: projects } }) => {
+                    return projects
+                      .sort(sortByDate)
+                      .map(({ node: { frontmatter: { title, bannerurl }, fields: { slug } } }) => (
+                        <Col sm={12} md={6} lg={3} key={title + Math.random() * 4400}>
+                          <Link to={`/projects${slug}`}>
+                            <ProjectWrapper imageSrc={bannerurl}>
+                              <ProjectTitle>{title}</ProjectTitle>
+                            </ProjectWrapper>
+                          </Link>
+                        </Col>
+                      ))
+                  }}
+                />
+              </Row>
+            </Container>
+          )}
+        />
       </Layout>
     )
   }

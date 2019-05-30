@@ -64,9 +64,7 @@ export default ({ data }) => {
               <MarginRow justify="center">
                 <Col align={['xs', 'sm'].includes(screenClass) ? 'center' : 'start'}>
                   <ProjectLinkWrapper>
-                    <a href={url}>
-                      <span>📎</span> View {title}
-                    </a>
+                    <span>📎</span> <a href={url}>View {title}</a>
                   </ProjectLinkWrapper>
                 </Col>
               </MarginRow>

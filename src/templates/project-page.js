@@ -8,8 +8,7 @@ import Carousel from 'nuka-carousel'
 import Layout from '../components/Layout'
 
 const StatusBadge = styled.h6`
-  background-color: ${({ status }) =>
-    status === 'completed' ? 'springgreen' : '#BADA55'};
+  background-color: ${({ status }) => (status === 'completed' ? 'springgreen' : '#BADA55')};
   color: white;
   font-weight: bold;
   display: inline-block;
@@ -26,10 +25,14 @@ const TechBadge = styled.h6`
   margin: none;
   border-radius: 10px;
   max-width: 100px;
-  padding: 5px;
+  padding: 5px 10px;
   text-align: center;
   display: inline-block;
   margin: 5px;
+`
+
+const StyledH1 = styled.h1`
+  border: 0px;
 `
 
 const StyledH3 = styled.h3`
@@ -38,6 +41,23 @@ const StyledH3 = styled.h3`
   border-radius: 6px;
   background-color: rgba(0, 0, 0, 0.15);
   text-align: center;
+`
+
+const ProjectLinkWrapper = styled.h2`
+  padding: 15px;
+  font-weight: 700;
+  background-color: rgba(0, 0, 0, 0.15);
+  a {
+    font-weight: normal;
+  }
+`
+
+const RowWithBottomBorder = styled(Row)`
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  margin-bottom: 25px;
+`
+const MarginRow = styled(Row)`
+  margin-bottom: 25px;
 `
 
 const resolveStatus = status => {
@@ -68,19 +88,18 @@ export default ({ data }) => {
     <Layout>
       <Helmet title={`${title} | ${site.siteMetadata.title}`} />
       <Container>
-        <Row justify="flex-end">
+        <RowWithBottomBorder justify="betwee ">
+          <Col>
+            <StyledH1>{title}</StyledH1>
+          </Col>
+
           <Col xs={12} md={2}>
             <Link to="/">
               <StyledH3>← Home</StyledH3>
             </Link>
           </Col>
-        </Row>
-        <Row justify="center">
-          <Col>
-            <h1>{title}</h1>
-          </Col>
-        </Row>
-        <Row justify="between">
+        </RowWithBottomBorder>
+        <MarginRow justify="between">
           <Col>
             <StatusBadge status={status}>{resolvedStatus}</StatusBadge>
           </Col>
@@ -90,22 +109,27 @@ export default ({ data }) => {
               <TechBadge>{tech}</TechBadge>
             ))}
           </Col>
-        </Row>
-        <Row justify="center">
+        </MarginRow>
+        {url ? (
+          <MarginRow justify="center">
+            <Col>
+              <ProjectLinkWrapper>
+                Project URL: <a href={url}>{url}</a>
+              </ProjectLinkWrapper>
+            </Col>
+          </MarginRow>
+        ) : null}
+        <MarginRow justify="center">
           <Col>
-            <a href={url}>{url}</a>
             <div dangerouslySetInnerHTML={{ __html: html }} />
           </Col>
-        </Row>
+        </MarginRow>
         <Row>
           <Col align="center">
             <Carousel
               renderCenterLeftControls={({ previousSlide }) =>
                 photos.length ? (
-                  <CarouselButton
-                    title="Previous slide"
-                    onClick={previousSlide}
-                  >
+                  <CarouselButton title="Previous slide" onClick={previousSlide}>
                     <i className="fas fa-angle-double-left fa-5x" />
                   </CarouselButton>
                 ) : null
@@ -151,7 +175,7 @@ const CarouselButton = styled.button`
   }
 `
 
-export const querey = graphql`
+export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       html

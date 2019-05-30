@@ -5,17 +5,15 @@ import { Container, Row, Col } from 'react-grid-system'
 import MetaButton from './MetaButton'
 
 const descriptors = [
-  'Weird Dad',
-  'Super Weird Dad',
-  'Mustache Curator',
-  'Dog',
-  'Card Tricker',
-  'Father of Bean',
-  'Mentor',
-  'Lighthouse',
-  'Cupboard',
-  'Surfboard, Surfboard',
+  'Weird Dad 👨🏼‍💻',
+  'Super Weird Dad 💁🏼‍♂️',
+  'Mentor 👨🏼‍🏫',
+  'Surfboard, Surfboard 🐝',
   'Ghost 👻',
+  'Just a Frontend Dev 🐥',
+  'Bike Dad 🚲',
+  'Sunflower 🌻',
+  'Big Daddy Developer 👱🏻‍♂️',
 ]
 
 const titleCase = string => string.charAt(0).toUpperCase() + string.substring(1)
@@ -29,29 +27,21 @@ const Header = () => (
       <Col lg={6} xs={12}>
         <Link to="/" style={{ textDecoration: 'none' }}>
           <Wordmark>Lee Mulvey</Wordmark>
-          <Submark>Developer, Creator, {randomDescriptor()}, Do-er</Submark>
+          <Submark>Developer & {randomDescriptor()}</Submark>
         </Link>
       </Col>
     </Row>
     <Row justify="center">
       <Col xs={10}>
         <ButtonsContainer>
-          <MetaButton
-            title="Blog"
-            link="http://www.leemulvey.com/blog"
-            icon="fal fa-newspaper"
-          />
+          <MetaButton title="Blog" link="http://www.leemulvey.com/blog" icon="fal fa-newspaper" />
           <MetaButton
             title="Twitter"
             theme={{ main: '#1dcaff', contrast: 'white' }}
             link="http://www.twitter.com/LeeMulvey"
             icon="fab fa-twitter"
           />
-          <MetaButton
-            title="GitHub"
-            link="http://www.github.com/LMulvey"
-            icon="fab fa-github"
-          />
+          <MetaButton title="GitHub" link="http://www.github.com/LMulvey" icon="fab fa-github" />
           <MetaButton
             title="StackOverflow"
             theme={{ main: '#FF9900', contrast: 'white', color: '#FF6922' }}

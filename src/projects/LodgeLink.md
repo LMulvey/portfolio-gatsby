@@ -16,8 +16,12 @@ technologies:
     HTML,
     CSS,
   ]
-bannerurl: https://res.cloudinary.com/leemulvey/image/upload/v1559186072/lodgelink-cover.png
-photos: !!seq []
+bannerurl: https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-cover.png
+photos: !!seq [
+  'https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-1.png',
+  'https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-2.png',
+  'https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-3.png'
+]
 ---
 
 LodgeLink 2.0 is an online accommodations marketplace designed to make booking accommodations for yourself, or your workforce as easy as possible. Create and manage your organization, manage crew lists and organization administrators, create and manage bookings, manage booking guest information on a granular level, fine-tune individual guest schedules throughout their stay, as well as see your bookings at a glance easily through the user dashboard.

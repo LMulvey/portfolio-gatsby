@@ -4,7 +4,7 @@ date: 10/15/2018
 status: contributor
 url: http://www.if-me.org
 technologies: !!seq [React, Ruby, Rails, CSS, JavaScript]
-bannerurl: http://res.cloudinary.com/leemulvey/image/upload/v1515544024/Portfolio/if-me-banner.png
+bannerurl: http://res.cloudinary.com/leemulvey/image/upload/c_scale,q_85,w_600/v1515544024/Portfolio/if-me-banner.png
 photos: !!seq []
 ---
 

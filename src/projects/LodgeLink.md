@@ -16,7 +16,7 @@ technologies:
     HTML,
     CSS,
   ]
-bannerurl: https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-cover.png
+bannerurl: https://res.cloudinary.com/leemulvey/image/upload/c_scale,q_85,w_600/v1559186072/Portfolio/lodgelink-cover.png
 photos: !!seq [
   'https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-1.png',
   'https://res.cloudinary.com/leemulvey/image/upload/v1559186072/Portfolio/lodgelink-2.png',

@@ -4,7 +4,7 @@ date: 08/23/2018
 status: ongoing
 url: http://www.learnditidaht.ca
 technologies: !!seq [React, Redux, Wordpress, Javascript]
-bannerurl: https://res.cloudinary.com/leemulvey/image/upload/v1541645467/Portfolio/diti-banner.png
+bannerurl: https://res.cloudinary.com/leemulvey/image/upload/c_scale,q_85,w_600/v1541645467/Portfolio/diti-banner.png
 photos: !!seq ['https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541999676/Portfolio/diti-1.png', 
 'https://res.cloudinary.com/leemulvey/image/upload/c_fit,h_500,w_1100/v1541999688/Portfolio/diti-2.png']
 ---

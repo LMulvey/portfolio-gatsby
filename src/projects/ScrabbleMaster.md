@@ -4,7 +4,7 @@ date: 09/01/2018
 status: inprogress
 url: http://www.leemulvey.com/scrabble
 technologies: !!seq [React, CSS, JavaScript]
-bannerurl: http://res.cloudinary.com/leemulvey/image/upload/v1515544024/Portfolio/scrabble-master-banner.png
+bannerurl: http://res.cloudinary.com/leemulvey/image/upload/c_scale,q_85,w_600/v1515544024/Portfolio/scrabble-master-banner.png
 photos: !!seq []
 ---
 

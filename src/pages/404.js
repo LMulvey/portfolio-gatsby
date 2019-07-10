@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { graphql } from 'gatsby';
 import Helmet from 'react-helmet'
 import { Container, Row, Col } from 'react-grid-system'
 import Layout from '../components/Layout'

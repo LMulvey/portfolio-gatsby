@@ -6,14 +6,14 @@ module.exports = {
       {
         name: 'description',
         content:
-          'Lee Mulvey is a web developer from Calgary, Alberta with experience in full-stack development including JavaScript, React, Redux, React Native, ES6, HTML, CSS, NextJS',
+          'Lee Mulvey is a web developer from Calgary, Alberta with experience in full-stack development including JavaScript, React, Redux, React Native, ES6, HTML, CSS, NextJS'
       },
       {
         name: 'keywords',
         content:
-          'web developer, developer, freelance, react, redux, node, javascript, css, html, ruby, rails, postgresql, mongodb, gatsby',
-      },
-    ],
+          'web developer, developer, freelance, react, redux, node, javascript, css, html, ruby, rails, postgresql, mongodb, gatsby'
+      }
+    ]
   },
   plugins: [
     'gatsby-transformer-remark',
@@ -25,15 +25,15 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
+        pathToConfigModule: 'src/utils/typography'
+      }
     },
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/`,
-        name: 'src',
-      },
-    },
-  ],
-}
+        name: 'src'
+      }
+    }
+  ]
+};

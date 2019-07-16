@@ -1,0 +1,14 @@
+{
+  "extends": ["prettier", "airbnb"],
+  "parser": "babel-eslint",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": "off",
+    "implicit-arrow-linebreak": "off",
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-one-expression-per-line": "off"
+  }
+}

@@ -42,10 +42,13 @@
     "deploy": "gatsby build && gh-pages -d public -b master -r git@github.com:LMulvey/LMulvey.github.io.git"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.2",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^6.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.11.1",
     "gh-pages": "^2.0.1",
     "prettier": "1.15.1"
